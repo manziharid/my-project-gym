@@ -1,1 +1,1 @@
-console.log('Manzi Haridi'.length);
+console.log(Math.cbrt(2));
