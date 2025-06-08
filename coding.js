@@ -1,1 +1,1 @@
-console.log(Math.cbrt(2));
+console.log(Math.cos(45));
