@@ -1,1 +1,1 @@
-console.log(Math.cos(45));
+console.log(Math.floor(0.97));
