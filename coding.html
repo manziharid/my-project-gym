@@ -1,10 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Number Game</title>
+</head>
 <body>
-  <h1>The Brown Bear</h1>
-  <h2>About Brown Bears</h2>
-  <h3>Species</h3>
-  <h3>Features</h3>
-  <h2>Habitat</h2>
-  <h3>Countries with Large Brown Bear Populations</h3>
-  <h3>Countries with Small Brown Bear Populations</h3>
-  <h2>Media</h2>
+  <h2>🎲 Guess the Number (1 to 10)</h2>
+  <input type="number" id="userGuess" min="1" max="10">
+  <button onclick="checkGuess()">Guess</button>
+  <p id="result"></p>
+
+  <script>
+    // Generate a random number from 1 to 10
+    let randomNumber = Math.floor(Math.random() * 10) + 1;
+
+    function checkGuess() {
+      let userInput = document.getElementById("userGuess").value;
+      let message = "";
+
+      if (parseInt(userInput) === randomNumber) {
+        message = "🎉 Correct! You guessed it!";
+      } else {
+        message = "❌ Wrong! Try again.";
+      }
+
+      document.getElementById("result").innerText = message;
+    }
+  </script>
 </body>
+</html>
