@@ -1,8 +1,3 @@
-function degToRad(degrees) {
-  return degrees * (Math.PI / 180);
+for (let a=0; a<=10; a ++){
+    console.log("MY NAME IS: MANZI HARIDI");
 }
-
-function radToDeg(rad) {
-  return rad / (Math.PI / 180);
-}
-radToDeg(4);
