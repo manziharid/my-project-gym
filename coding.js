@@ -1,3 +1,1 @@
-for (let a=0; a<=10; a ++){
-    console.log("MY NAME IS: MANZI HARIDI");
-}
+console.log(Math.cbrt(8));
