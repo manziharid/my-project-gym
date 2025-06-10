@@ -1,2 +1,1 @@
-let randomNumber = Math.floor(Math.random() * 10) + 1;
-console.log(randomNumber); // Could be 1, 2, 3, ..., 10
+console.log(Math.floor(Math.random(39)*10));
