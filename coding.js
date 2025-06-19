@@ -1,1 +1,1 @@
-console.log("I'm manzi harid");
+console.log("I'm manziharid");
