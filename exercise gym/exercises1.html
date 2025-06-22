@@ -11,6 +11,26 @@
         </div>
 
           <p id="demo"></p>
+          <div id="box"></div>
+
+<style>
+#box {
+  width: 100px;
+  height: 100px;
+  background: yellowgreen;
+  transition: all 3s;
+}
+#box.active {
+  transform: translateX(200px);
+}
+</style>
+
+    <script>
+        document.getElementById("box").onclick = function() {
+            this.classList.toggle("active");
+}
+      </script>
+
 
         <script>
             document.getElementById("mk").innerHTML="hy manzi";
