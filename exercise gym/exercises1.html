@@ -45,21 +45,13 @@
 };
 
         </script>
-        <div id="box" style="width:100px; height:100px; background:red; position:absolute;"></div>
+        
 
-<script>
-let box = document.getElementById("box");
-let pos = 0;
+<h1 id="id1"><br>My Heading 1</h1>
 
-let interval = setInterval(function() {
-  if (pos >= 20) {
-    clearInterval(interval); // stop when done
-  } else {
-    pos++;
-    box.style.right = pos + "px"; // move right
-  }
-}, 1000);
-</script>
+<button type="button"
+onclick="document.getElementById('id1').style.color = 'red'">
+<br>Click Me!</button>
 
     </body>
 </html>
