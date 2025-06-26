@@ -1,0 +1,11 @@
+body{
+    background-color: aquamarine;
+    padding: 40px;
+    margin: auto;
+    color: blueviolet;
+}
+*{
+    color: azure;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+}
