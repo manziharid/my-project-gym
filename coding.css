@@ -31,3 +31,13 @@ footer{
     color: blue;
     text-align: center;
 }
+.home{
+    background-color: black;
+    color: chartreuse;
+    font-display: fallback;
+}
+.information{
+    background-color: cadetblue;
+    width: 100%;
+
+}
