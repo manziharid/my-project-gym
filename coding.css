@@ -13,3 +13,13 @@ h1, h2, p {
     font-weight: 100;
     color: azure;
 }
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+li{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 12px;
+}
