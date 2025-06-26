@@ -39,5 +39,12 @@ footer{
 .information{
     background-color: cadetblue;
     width: 100%;
+    padding-bottom: 20%;
+    padding-top: 20%;
 
+}
+#img{
+    display: inline;
+    width: 20% 30%;
+    justify-content: space-between;
 }
