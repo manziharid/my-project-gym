@@ -1,11 +1,15 @@
-body{
+body {
     background-color: aquamarine;
     padding: 40px;
     margin: auto;
+}
+
+h1, h2, p {
     color: blueviolet;
 }
-*{
-    color: azure;
+
+* {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 100;
+    color: azure;
 }
