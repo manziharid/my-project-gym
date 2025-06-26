@@ -1,7 +1,8 @@
 body {
-    background-color: aquamarine;
+    background-color: rgb(43, 46, 45);
     padding: 40px;
     margin: auto;
+    text-align: center;
 }
 
 h1, h2, p {
@@ -17,9 +18,16 @@ h1, h2, p {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    text-align: center;
 }
 li{
     display: inline-block;
     list-style-type: none;
     margin: 0 12px;
+    text-align: center;
+}
+footer{
+    background-color: brown;
+    color: blue;
+    text-align: center;
 }
