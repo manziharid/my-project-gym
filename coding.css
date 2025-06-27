@@ -27,9 +27,11 @@ li{
     text-align: center;
 }
 footer{
-    background-color: brown;
-    color: blue;
+    background-color: rgb(32, 228, 114);
+    color: white;
     text-align: center;
+    padding-top: 3%;
+    border-color: rgb(39, 39, 226);
 }
 .home{
     background-color: black;
@@ -39,8 +41,8 @@ footer{
 .information{
     background-color: cadetblue;
     width: 100%;
-    padding-bottom: 20%;
-    padding-top: 20%;
+    padding-bottom: 5%;
+    padding-top: 5%;
 
 }
 #img{
