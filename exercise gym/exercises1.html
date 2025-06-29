@@ -1,67 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <p id="mk">who are you?</p>
-        <button id="myButton">Click Me</button>
-     <h2>JavaScript HTML DOM</h2>
-
-         <div id="main">
-               <p>Finding HTML Elements by Tag Name</p>
-               <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
-        </div>
-
-          <p id="demo"></p>
-          <div id="box"></div>
-
-<style>
-#box {
-  width: 100px;
-  height: 100px;
-  background: yellowgreen;
-  transition: all 3s;
-}
-#box.active {
-  transform: translateX(200px);
-}
-</style>
-
-    <script>
-        document.getElementById("box").onclick = function() {
-            this.classList.toggle("active");
-}
-      </script>
-
-
-        <script>
-            document.getElementById("mk").innerHTML="hy manzi";
-            document.write("my name is HARIDI MANZI iam 20 years old iam doing my bachelors degree in IT at AUCA university");
-            let element = document.getElementById("myButton");
-            element.onclick = function() {
-  alert("Button clicked!");
-   const x = document.getElementById("main");
-   const y = x.getElementsByTagName("p");
-
-   document.getElementById("demo").innerHTML = 'The first paragraph (index 0) inside "main" is: ' + y[1].innerHTML;
-};
-
-        </script>
-        
-
-<h1 id="id1"><br>My Heading 1</h1>
-
-<button type="button"
-onclick="document.getElementById('id1').style.color = 'red'">
-<br>Click Me!</button>
+<body>
 <h1>JavaScript HTML Events</h1>
-<h2>The onclick Attribute</h2>
+<h2>The onmouseover Attribute</h2>
 
-<h2 onclick="changeText(this)">Click on this text!</h2>
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
 
 <script>
-function changeText(id) {
-  id.innerHTML = "Ooops!";
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "i'am khalid"
 }
 </script>
 
-    </body>
-</html>
+</body>
+</html> 
