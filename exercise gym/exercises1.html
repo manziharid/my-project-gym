@@ -7,6 +7,9 @@
 <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
 style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
 Mouse Over Me</div>
+<p>this is example of eventlistener for displaying date</p>
+<button id="mybtn">clickme</button>
+<p id="demo"></p>
 
 <script>
 function mOver(obj) {
@@ -15,6 +18,11 @@ function mOver(obj) {
 
 function mOut(obj) {
   obj.innerHTML = "i'am khalid"
+}
+document.getElementById("mybtn").addEventListener("click", displaydate);
+
+function displaydate() {
+  document.getElementById("demo").innerHTML=date();
 }
 </script>
 
