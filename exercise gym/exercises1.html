@@ -10,6 +10,8 @@ Mouse Over Me</div>
 <p>this is example of eventlistener for displaying date</p>
 <button id="mybtn">clickme</button>
 <p id="demo"></p>
+<p id="mk">you can mouse over, mouse out and click on thesame button</p>
+<button id="fk"></button>
 
 <script>
 function mOver(obj) {
@@ -19,11 +21,28 @@ function mOver(obj) {
 function mOut(obj) {
   obj.innerHTML = "i'am khalid"
 }
-document.getElementById("mybtn").addEventListener("click", displaydate);
+document.getElementById("mybtn").addEventListener("click", displayDate);
 
-function displaydate() {
-  document.getElementById("demo").innerHTML=date();
+function displayDate() {
+  document.getElementById("demo").innerHTML = new Date();
 }
+document.getElementById("mybtn").addEventListener("click", function(){
+  alert("hy you need to see to day's date")
+});
+var x=document.getElementById(mk);
+x.addEventListener("click", mouseOver);
+x.addEventListener("mouseover", myfunction);
+x.addEventListener("mouseout", mouseOUT);
+
+function mouseOver(){
+  document.getElementById("fk").innerHTML += "you moused over me. right?<br>";
+}
+function mouseOUT(){
+  document.getElementById("fk").innerHTML += "you moused again. you should need to mouse out<br>";
+}
+function myfunction(
+  document.getElementById("fk").innerHTML +="you clicked on this buttom , exactly you didit!<br>";
+)
 </script>
 
 </body>
