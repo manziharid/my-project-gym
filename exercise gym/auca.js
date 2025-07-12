@@ -1,11 +1,5 @@
-let server = {
-    name: 'Server',
-    restart() {
-        console.log("The " + this.name + " is restarting...");
-    },
-    'starting up'() {
-        console.log("The " +  this.name + " is starting up!");
-    }
-};
+let colors = ['Red', 'Green', 'Blue'];
 
-server['restart']();
+for (const [index, color] of colors.entries()) {
+    console.log(`${color} is at index ${index}`);
+}
