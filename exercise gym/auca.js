@@ -1,9 +1,5 @@
-let colors = new Map();
+let nums = new Set([1, 2, 3]);
 
-colors.set('red', '#ff0000');
-colors.set('green', '#00ff00');
-colors.set('blue', '#0000ff');
-
-for (let color of colors) {
-    console.log(color);
+for (let num of nums) {
+    console.log(num);
 }
