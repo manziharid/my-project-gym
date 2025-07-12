@@ -1,2 +1,6 @@
-let a = 041;
-console.log(a); // 33
+let msg = 'Multiline \n\
+string';
+
+console.log(msg);
+//Multiline
+//string
