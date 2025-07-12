@@ -1,8 +1,8 @@
-let name = 'Computer',
-    status = 'On';
-
+let name = 'machine name';
 let machine = {
-   name,
-   status
+    [name]: 'server',
+    'machine hours': 10000
 };
-console.log(machine);
+
+console.log(machine[name]); // server
+console.log(machine['machine hours']); // 10000
