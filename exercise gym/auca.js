@@ -1,7 +1,9 @@
-function date(d = today()) {
-    console.log(d);
+function sum(...args) {
+    let total = 0;
+    for (const a of args) {
+        total += a;
+    }
+    console.log(total);
 }
-function today() {
-    return (new Date()).toLocaleDateString("en-US");
-}
-date();
+
+sum(1, 2, 3, 4);
