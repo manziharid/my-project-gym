@@ -1,6 +1,8 @@
-function createMachine(name, status) {
-    return {
-        name: name,
-        status: status
-    };
-}
+let name = 'Computer',
+    status = 'On';
+
+let machine = {
+   name,
+   status
+};
+console.log(machine);
