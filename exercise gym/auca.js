@@ -1,9 +1,7 @@
-function put(toy, toyBox = []) {
-    toyBox.push(toy);
-    return toyBox;
+function date(d = today()) {
+    console.log(d);
 }
-
-console.log(put('Toy Car'));
-// -> ['Toy Car']
-console.log(put('Teddy Bear'));
-// -> ['Teddy Bear'], not ['Toy Car','Teddy Bear']
+function today() {
+    return (new Date()).toLocaleDateString("en-US");
+}
+date();
