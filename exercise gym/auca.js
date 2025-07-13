@@ -1,6 +1,6 @@
-let msg = 'Multiline \n\
-string';
-
+let msg = ['This text',
+         'can',
+         'span multiple lines'].join('\n');
+        
+         
 console.log(msg);
-//Multiline
-//string
