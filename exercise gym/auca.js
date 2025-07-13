@@ -1,4 +1,2 @@
-let {firstname: manzi, secondnameme: khalidi} = a;
-console.log(firstname);
-console.log(secondname);
-
+let person = {firstname :'khalid', lastname :'manzi'};
+console.log(person);
