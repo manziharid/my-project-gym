@@ -1,6 +1,2 @@
-let msg = 'Multiline \n\
-string';
-
-console.log(msg);
-//Multiline
-//string
+let anotherStr = `Here's a template literal`;
+console.log(anotherStr);
