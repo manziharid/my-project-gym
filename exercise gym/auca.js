@@ -1,18 +1,10 @@
-let employee = {
-  name: {
-    firstName: "John",
-    lastName: "Doe"
-  },
-  age: 30
-};
+function getScores() {
+  return [70, 80, 90];
+}
+let scores = getScores();
 
-// Nested destructuring
-let {
-  name: {
-    firstName,
-    lastName
-  }
-} = employee;
+let x = scores[0],
+  y = scores[1],
+  z = scores[2];
 
-console.log(firstName); // John
-console.log(lastName);  // Doe
+console.log({ x, y, z });
