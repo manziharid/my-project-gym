@@ -1,19 +1,10 @@
-let employee = {
-    id: 1001,
-    name: {
-        firstName: 'John',
-        lastName: 'Doe'
-    }
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.getName = function () {
+    return this.name;
 };
 
-let {
-    name: {
-        firstName,
-        lastName
-    },
-    name
-} = employee;
-
-console.log(firstName); // John
-console.log(lastName); // Doe
-console.log(name); // { firstName: 'John', lastName: 'Doe' }
+var john = new Person("John Doe");
+console.log(john.getName());
