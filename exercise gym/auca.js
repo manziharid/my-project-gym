@@ -1,8 +1,5 @@
 function getItems() {
-  return [10, 20];
+    return null;
 }
 
-let items = getItems();
-let thirdItem = items[2] != undefined ? items[2] : 0;
-
-console.log({ thirdItem }); // 0
+let [x = 1, y = 2] = getItems();
