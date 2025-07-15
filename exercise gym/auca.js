@@ -1,7 +1,4 @@
-function getScores() {
-  return [70, 80];
-}
+let a, b;
+[a, b] = [10, 20];
 
-let [x, y, z] = getScores();
-
-console.log({ x, y,  });
+console.log({ a, b });
