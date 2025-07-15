@@ -1,8 +1,11 @@
-function getItems() {
-    return null;
-}
+let [
+    firstName,
+    lastName,
+    [
+        color1,
+        color2,
+        color3
+    ]
+] = getProfile();
 
-let [a = 10, b = 20] = getItems() || [];
-
-console.log(a); // 10
-console.log(b); // 20
+console.log(color1, color2, color3); // Red Green Blue
