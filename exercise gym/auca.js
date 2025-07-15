@@ -1,8 +1,15 @@
 class Person {
     constructor(name) {
-        this.name = name;
+        this._name = name;
+    }
+    get name() {
+        return this._name;
     }
 }
 
-let person = new Person("John");
-console.log(person.name); // John
+let person = new Person("Jane Doe");
+console.log(person.name);
+
+// attempt to change the name, but cannot
+person.name = 'Jane Smith';
+console.log(person.name); // Jane Doe
