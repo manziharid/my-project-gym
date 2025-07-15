@@ -1,5 +1,4 @@
-let person = {
-    firstName: 'John',
-    lastName: 'Doe'
-};
-console.log(person);
+let { firstName, lastName } = person;
+
+console.log(firstName); // 'John'
+console.log(lastName); // 'Doe'
