@@ -1,11 +1,19 @@
-let person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    middleName: 'C.',
-    currentAge: 28
+let employee = {
+    id: 1001,
+    name: {
+        firstName: 'John',
+        lastName: 'Doe'
+    }
 };
 
-let { firstName,  lastName, middleName = '', currentAge: age = 18 } = person;
+let {
+    name: {
+        firstName,
+        lastName
+    },
+    name
+} = employee;
 
-console.log(middleName); // 'C.'
-console.log(age); // 28
+console.log(firstName); // John
+console.log(lastName); // Doe
+console.log(name); // { firstName: 'John', lastName: 'Doe' }
