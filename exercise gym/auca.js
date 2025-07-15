@@ -2,4 +2,7 @@ function getItems() {
     return null;
 }
 
-let [x = 1, y = 2] = getItems();
+let [a = 10, b = 20] = getItems() || [];
+
+console.log(a); // 10
+console.log(b); // 20
