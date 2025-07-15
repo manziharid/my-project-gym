@@ -1,4 +1,10 @@
-let { firstName, lastName } = person;
+let person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    currentAge: 28
+};
 
-console.log(firstName); // 'John'
-console.log(lastName); // 'Doe'
+let { firstName, lastName, middleName = '', currentAge: age = 18 } = person;
+
+console.log(middleName); // ''
+console.log(age); // 28
