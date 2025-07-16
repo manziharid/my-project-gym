@@ -1,15 +1,15 @@
-class Person {
-    constructor(name) {
-        this._name = name;
+let meeting = {
+    attendees: [],
+    add(attendee) {
+        console.log(`${attendee} joined the meeting.`);
+        this.attendees.push(attendee);
+        return this;
+    },
+    get latest() {
+        let count = this.attendees.length;
+        return count == 0 ? undefined : this.attendees[count - 1];
     }
-    get name() {
-        return this._name;
-    }
-}
+};
 
-let person = new Person("Jane Doe");
-console.log(person.name);
-
-// attempt to change the name, but cannot
-person.name = 'Jane Smith';
-console.log(person.name); // Jane Doe
+meeting.add('John').add('Jane').add('Peter');
+console.log(`The latest attendee is ${meeting.latest}.`);
