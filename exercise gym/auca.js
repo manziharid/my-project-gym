@@ -1,1 +1,1 @@
-console.log("hi manzi haridi i'm");
+console.log("hi manzi haridi i'm 20");
