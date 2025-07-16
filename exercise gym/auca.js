@@ -1,21 +1,15 @@
 class Person {
     constructor(name) {
-        this.setName(name);
+        this._name = name;
     }
-    getName() {
-        return this.name;
-    }
-    setName(newName) {
-        newName = newName.trim();
-        if (newName === '') {
-            throw 'The name cannot be empty';
-        }
-        this.name = newName;
+    get name() {
+        return this._name;
     }
 }
 
-let person = new Person('Jane Doe');
-console.log(person); // Jane Doe
+let person = new Person("Jane Doe");
+console.log(person.name);
 
-person.setName('Jane Smith');
-console.log(person.getName()); // Jane Smith
+// attempt to change the name, but cannot
+person.name = 'Jane Smith';
+console.log(person.name); // Jane Doe
