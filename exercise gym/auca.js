@@ -1,12 +1,8 @@
-class Person {
-	constructor(name) {
-		this.name = name;
-	}
-	getName() {
-		return this.name;
-	}
-	static createAnonymous(gender) {
-		let name = gender == "male" ? "John Doe" : "Jane Doe";
-		return new Person(name);
-	}
+class Item {
+  static count = 0;
+  static getCount() {
+    return Item.count;
+  }
 }
+
+console.log(Item.getCount()); // 0
