@@ -1,8 +1,7 @@
-new class {
-    constructor(name) {
-        this.name = name;
-    }
-    start() {
-        console.log(`Starting the ${this.name}...`);
-    }
-}('Awesome App')
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.getName = function () {
+    return this.name;
+};
