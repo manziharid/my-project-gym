@@ -1,10 +1,8 @@
-let app = new class {
+new class {
     constructor(name) {
         this.name = name;
     }
     start() {
         console.log(`Starting the ${this.name}...`);
     }
-}('Awesome App');
-
-app.start(); // Starting the Awesome App...
+}('Awesome App')
