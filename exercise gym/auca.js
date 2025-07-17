@@ -1,8 +1,9 @@
-let Person = class {
-    constructor(name) {
-        this.name = name;
-    }
-    getName() {
-        return this.name;
-    }
+function factory(aClass) {
+    return new aClass();
 }
+
+let greeting = factory(class {
+    sayHi() { console.log('Hi'); }
+});
+
+greeting.sayHi(); // 'Hi'
