@@ -1,9 +1,10 @@
-function factory(aClass) {
-    return new aClass();
-}
+let app = new class {
+    constructor(name) {
+        this.name = name;
+    }
+    start() {
+        console.log(`Starting the ${this.name}...`);
+    }
+}('Awesome App');
 
-let greeting = factory(class {
-    sayHi() { console.log('Hi'); }
-});
-
-greeting.sayHi(); // 'Hi'
+app.start(); // Starting the Awesome App...
