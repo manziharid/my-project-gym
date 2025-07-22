@@ -1,1 +1,4 @@
-console.log("I'm manziharidi");
+let propertyName = 'dynamicPropertyName';
+const obj = {
+    [propertyName] : value
+}
