@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onmouseover Attribute</h2>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
+<p>this is example of eventlistener for displaying date</p>
+<button id="mybtn">clickme</button>
+<p id="demo"></p>
+<p id="mk">you can mouse over, mouse out and click on thesame button</p>
+<button id="fk">try it here</button>
+
+<script>
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "i'am khalid"
+}
+document.getElementById("mybtn").addEventListener("click", displayDate);
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = new Date();
+}
+document.getElementById("mybtn").addEventListener("click", function(){
+  alert("hy you need to see to day's date")
+});
+var x=document.getElementById("mk");
+x.addEventListener("click", mouseOver);
+x.addEventListener("mouseover", myfunction);
+x.addEventListener("mouseout", mouseOUT);
+
+function mouseOver(){
+  document.getElementById("fk").innerHTML += "right?<br>";
+}
+function mouseOUT(){
+  document.getElementById("fk").innerHTML += "you moused again.<br>";
+}
+function myfunction(){
+  document.getElementById("fk").innerHTML +="you clicked!<br>";
+}
+  
+</script>
+
+</body>
+</html> 
