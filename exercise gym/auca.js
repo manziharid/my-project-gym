@@ -1,6 +1,14 @@
-// Item class ...
+const name = 'fullName';
 
-let pen = new Item("Pen", 5);
-let notebook = new Item("notebook", 10);
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  get [name]() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
 
-console.log(Item.getCount()); // 2
+let person = new Person('John', 'Doe');
+console.log(person.fullName);
