@@ -19,3 +19,9 @@ li{
     padding: 28%;
     width: auto;
 }
+body{
+    background-color: darkblue;
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
