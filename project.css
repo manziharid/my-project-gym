@@ -25,3 +25,9 @@ body{
     margin: auto;
     text-align: center;
 }
+#img{
+    display: inline;
+    width: 20% 30%;
+    justify-content: space-between;
+
+}
