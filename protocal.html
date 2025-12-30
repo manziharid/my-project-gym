@@ -28,28 +28,10 @@
         z-index: 100;
         flex-wrap: wrap;
     }
-    .navbar .logo {
-        font-size: 22px;
-        font-weight: bold;
-        color: #bfa135;
-    }
-    .navbar ul {
-        display: flex;
-        list-style: none;
-        gap: 25px;
-        margin: 0;
-        padding: 0;
-        flex-wrap: wrap;
-    }
-    .navbar ul li a {
-        color: #bfa135;
-        text-decoration: none;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-    .navbar ul li a:hover {
-        color: #fff;
-    }
+    .navbar .logo { font-size: 22px; font-weight: bold; color: #bfa135; }
+    .navbar ul { display: flex; list-style: none; gap: 25px; margin: 0; padding: 0; flex-wrap: wrap; }
+    .navbar ul li a { color: #bfa135; text-decoration: none; font-weight: bold; transition: 0.3s; }
+    .navbar ul li a:hover { color: #fff; }
     .navbar .contact-btn {
         background-color: #bfa135;
         color: #0f0f0f;
@@ -60,37 +42,16 @@
         transition: 0.3s;
         white-space: nowrap;
     }
-    .navbar .contact-btn:hover {
-        background-color: #a68f2a;
-        color: #fff;
-    }
+    .navbar .contact-btn:hover { background-color: #a68f2a; color: #fff; }
 
-    /* Navbar right side: social icons + search */
-    .nav-right {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-    .social-icon img {
-        width: 24px;
-        height: 24px;
-        transition: 0.3s;
-    }
-    .social-icon img:hover {
-        filter: brightness(0.8);
-    }
-    .search-box {
-        padding: 5px 10px;
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        font-size: 14px;
-    }
+    .nav-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .social-icon img { width: 24px; height: 24px; transition: 0.3s; }
+    .social-icon img:hover { filter: brightness(0.8); }
+    .search-box { padding: 5px 10px; border-radius: 5px; border: none; outline: none; font-size: 14px; }
 
     /* Hero Section */
     .hero {
-        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0IFtagpNW-PVu-6cvDXoLwbTWNQLVW0xjJw&s') center center/cover no-repeat;
+        background: url('https://images.unsplash.com/photo-1573164574237-01f0f0b7b31a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5N3wwfDB8MXxhbGx8fHx8fHx8Mnx8MTY5Nzk5MzE5Mg&ixlib=rb-4.0.3&q=80&w=1080') center center/cover no-repeat;
         height: 90vh;
         display: flex;
         flex-direction: column;
@@ -108,22 +69,10 @@
         background-color: rgba(15, 15, 15, 0.6);
         z-index: 1;
     }
-    .hero-content {
-        position: relative;
-        z-index: 2;
-        max-width: 700px;
-    }
-    .hero h1 {
-        font-size: 60px;
-        color: #bfa135;
-        margin: 0 0 20px 0;
-    }
-    .hero p {
-        font-size: 20px;
-        margin-bottom: 30px;
-        color: #fff;
-    }
-    .hero .btn {
+    .hero-content { position: relative; z-index: 2; max-width: 700px; display: flex; flex-direction: column; gap: 15px; }
+    .hero h1 { font-size: 60px; color: #bfa135; margin: 0; }
+    .hero p { font-size: 20px; margin: 0; color: #fff; }
+    .hero .btn, .hero .reserve-btn {
         background-color: #bfa135;
         color: #0f0f0f;
         padding: 15px 30px;
@@ -134,98 +83,36 @@
         font-weight: bold;
         text-decoration: none;
         transition: 0.3s;
+        margin-top: 10px;
     }
-    .hero .btn:hover {
-        background-color: #a68f2a;
-        color: #fff;
-    }
+    .hero .btn:hover, .hero .reserve-btn:hover { background-color: #a68f2a; color: #fff; }
 
     /* Sections */
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 60px 20px;
-    }
-    h2 {
-        color: #bfa135;
-        margin-bottom: 20px;
-    }
-    p, li {
-        color: #fff;
-        line-height: 1.6;
-    }
-    ul {
-        padding-left: 20px;
-    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+    h2 { color: #bfa135; margin-bottom: 20px; }
+    p, li { color: #fff; line-height: 1.6; }
+    ul { padding-left: 20px; }
+
+    /* Image section */
+    .protocol-image { width: 100%; border-radius: 8px; margin: 30px 0; }
 
     /* Gallery styles */
-    .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-    .gallery img {
-        width: calc(33.333% - 10px);
-        border-radius: 5px;
-    }
-    @media (max-width: 768px) {
-        .gallery img {
-            width: calc(50% - 10px);
-        }
-    }
-    @media (max-width: 480px) {
-        .gallery img {
-            width: 100%;
-        }
-    }
+    .gallery { display: flex; flex-wrap: wrap; gap: 15px; }
+    .gallery img { width: calc(33.333% - 10px); border-radius: 5px; }
+    @media (max-width: 768px) { .gallery img { width: calc(50% - 10px); } }
+    @media (max-width: 480px) { .gallery img { width: 100%; } }
 
     /* Footer */
-    footer {
-        background-color: #0f0f0f;
-        color: #fff;
-        text-align: center;
-        padding: 40px 20px;
-        border-top: 2px solid #bfa135;
-    }
-    footer p {
-        margin: 8px 0;
-    }
-    footer strong {
-        color: #bfa135;
-    }
-    footer a {
-        color: #bfa135;
-        text-decoration: none;
-    }
-    footer a:hover {
-        text-decoration: underline;
-    }
+    footer { background-color: #0f0f0f; color: #fff; text-align: center; padding: 40px 20px; border-top: 2px solid #bfa135; }
+    footer p { margin: 8px 0; }
+    footer strong { color: #bfa135; }
+    footer a { color: #bfa135; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
 
     /* Responsive adjustments */
-    @media (max-width: 1024px) {
-        .hero {
-            padding: 0 30px;
-        }
-        .navbar {
-            padding: 10px 20px;
-        }
-    }
-    @media (max-width: 768px) {
-        .hero h1 { font-size: 40px; }
-        .hero p { font-size: 16px; }
-        .navbar ul { gap: 12px; flex-wrap: wrap; }
-        .nav-right { gap: 5px; }
-        .search-box { width: 100px; }
-        .hero .btn { padding: 12px 20px; font-size: 16px; }
-    }
-    @media (max-width: 480px) {
-        .hero h1 { font-size: 32px; }
-        .hero p { font-size: 14px; }
-        .navbar .logo { font-size: 20px; }
-        .navbar .contact-btn { padding: 8px 15px; font-size: 14px; }
-        .search-box { width: 90px; }
-        .hero .btn { padding: 10px 18px; font-size: 14px; }
-    }
+    @media (max-width: 1024px) { .hero { padding: 0 30px; } .navbar { padding: 10px 20px; } }
+    @media (max-width: 768px) { .hero h1 { font-size: 40px; } .hero p { font-size: 16px; } }
+    @media (max-width: 480px) { .hero h1 { font-size: 32px; } .hero p { font-size: 14px; } }
 </style>
 </head>
 <body>
@@ -262,7 +149,10 @@
     <div class="hero-content">
         <h1>Elegant Services & Protocol</h1>
         <p>Professional Event & Protocol Management for VIPs, Corporates, and Special Occasions</p>
-        <a href="#overview" class="btn">Learn More</a>
+        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+            <a href="#overview" class="btn">Learn More</a>
+            <a href="#reservation" class="reserve-btn">Reservation</a>
+        </div>
     </div>
 </section>
 
@@ -270,6 +160,9 @@
 <section class="container" id="overview">
     <h2>About Elegant Services</h2>
     <p>Elegant Services & Protocol is dedicated to providing seamless, professional event and protocol management for VIPs, corporations, and special occasions. Our goal is to ensure every event runs smoothly, elegantly, and leaves a lasting impression.</p>
+
+    <!-- Protocol Image -->
+    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Event Protocol" class="protocol-image">
 </section>
 
 <!-- How It Works Section -->
@@ -303,6 +196,13 @@
     <p>"Elegant Services made our corporate event flawless!" – Company A</p>
     <p>"Professional, punctual, and very friendly team." – VIP Guest</p>
     <p>"Highly recommend their VIP protocol services!" – Company B</p>
+</section>
+
+<!-- Reservation Section -->
+<section class="container" id="reservation">
+    <h2>Make a Reservation</h2>
+    <p>Reserve our services for your upcoming event. Click the button below to call us and book your reservation immediately.</p>
+    <a href="tel:+250791449288" class="reserve-btn">Reserve Now</a>
 </section>
 
 <!-- Footer -->
