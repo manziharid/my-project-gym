@@ -20,26 +20,26 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px 40px;
+        padding: 15px 30px;
         position: sticky;
         top: 0;
         background-color: #0f0f0f;
         border-bottom: 2px solid #bfa135;
         z-index: 100;
         flex-wrap: wrap;
-        gap: 10px;
     }
     .navbar .logo {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: bold;
         color: #bfa135;
     }
     .navbar ul {
         display: flex;
         list-style: none;
-        gap: 30px;
+        gap: 25px;
         margin: 0;
         padding: 0;
+        flex-wrap: wrap;
     }
     .navbar ul li a {
         color: #bfa135;
@@ -53,11 +53,12 @@
     .navbar .contact-btn {
         background-color: #bfa135;
         color: #0f0f0f;
-        padding: 10px 20px;
+        padding: 10px 18px;
         border-radius: 5px;
         font-weight: bold;
         text-decoration: none;
         transition: 0.3s;
+        white-space: nowrap;
     }
     .navbar .contact-btn:hover {
         background-color: #a68f2a;
@@ -69,6 +70,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        flex-wrap: wrap;
     }
     .social-icon img {
         width: 24px;
@@ -94,7 +96,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        padding-left: 60px;
+        padding: 0 50px;
         text-shadow: 2px 2px 5px #000;
         position: relative;
     }
@@ -178,16 +180,16 @@
         text-decoration: underline;
     }
 
-    /* Responsive */
-    @media (max-width: 992px) {
-        .navbar {
-            flex-direction: column;
-            align-items: flex-start;
+    /* Responsive adjustments for mobile */
+    @media (max-width: 1024px) {
+        .hero {
+            padding: 0 30px;
         }
-        .nav-right {
-            margin-top: 10px;
+        .navbar {
+            padding: 10px 20px;
         }
     }
+
     @media (max-width: 768px) {
         .hero h1 {
             font-size: 40px;
@@ -196,14 +198,41 @@
             font-size: 16px;
         }
         .navbar ul {
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
         }
         .nav-right {
             gap: 5px;
         }
         .search-box {
-            width: 120px;
+            width: 100px;
+        }
+        .hero .btn {
+            padding: 12px 20px;
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero h1 {
+            font-size: 32px;
+        }
+        .hero p {
+            font-size: 14px;
+        }
+        .navbar .logo {
+            font-size: 20px;
+        }
+        .navbar .contact-btn {
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        .search-box {
+            width: 90px;
+        }
+        .hero .btn {
+            padding: 10px 18px;
+            font-size: 14px;
         }
     }
 </style>
