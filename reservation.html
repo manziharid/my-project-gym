@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reservation - Elegant Services</title>
+<style>
+    body, html { margin:0; padding:0; font-family:Arial,sans-serif; background-color:#0f0f0f; color:#fff; scroll-behavior:smooth;}
+    .hero {background:url('https://images.unsplash.com/photo-1573164574237-01f0f0b7b31a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5N3wwfDB8MXxhbGx8fHx8fHx8Mnx8MTY5Nzk5MzE5Mg&ixlib=rb-4.0.3&q=80&w=1080') center center/cover no-repeat; height:40vh; display:flex; justify-content:center; align-items:center; text-shadow:2px 2px 5px #000; position:relative;}
+    .hero::after {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(15,15,15,0.6); z-index:1;}
+    .hero h1 {position:relative; z-index:2; font-size:40px; color:#bfa135;}
+    .container {max-width:700px; margin:-50px auto 60px auto; background-color:rgba(15,15,15,0.9); padding:40px 30px; border-radius:10px; box-shadow:0 0 15px rgba(0,0,0,0.7);}
+    h2 {color:#bfa135; text-align:center; margin-bottom:30px;}
+    label {display:block; margin-bottom:8px; color:#bfa135; font-weight:bold;}
+    input, select, textarea {width:100%; padding:10px; margin-bottom:20px; border-radius:5px; border:none; font-size:16px;}
+    textarea {resize:vertical;}
+    button {background-color:#bfa135; color:#0f0f0f; padding:15px; font-size:18px; font-weight:bold; border:none; border-radius:5px; cursor:pointer; width:100%; transition:0.3s;}
+    button:hover {background-color:#a68f2a; color:#fff;}
+    @media (max-width:480px) {.hero h1{font-size:28px;}.container{padding:30px 20px;}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <h1>Reservation Form</h1>
+</section>
+
+<div class="container">
+    <h2>Book Your Event</h2>
+    <form action="#" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+250 ..." required>
+
+        <label for="event">Event Type</label>
+        <select id="event" name="event" required>
+            <option value="">Select Event Type</option>
+            <option value="corporate">Corporate</option>
+            <option value="vip">VIP</option>
+            <option value="wedding">Wedding</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="message">Additional Details</label>
+        <textarea id="message" name="message" rows="4" placeholder="Any special requirements..."></textarea>
+
+        <button type="submit">Submit Reservation</button>
+    </form>
+</div>
+
+</body>
+</html>
