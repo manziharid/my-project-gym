@@ -10,17 +10,18 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
     color: #fff;
 }
 
-/* BACKGROUND */
+/* SAME BACKGROUND IMAGE */
 .hero {
     background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0IFtagpNW-PVu-6cvDXoLwbTWNQLVW0xjJw&s') center/cover no-repeat;
     min-height: 100vh;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 .hero::after {
     content: "";
@@ -29,11 +30,10 @@ body, html {
     background: rgba(0,0,0,0.7);
 }
 
-/* FORM */
 .form-box {
     position: relative;
     z-index: 2;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.85);
     padding: 40px;
     border-radius: 10px;
     width: 100%;
@@ -69,35 +69,24 @@ button {
 <section class="hero">
     <div class="form-box">
         <h2>Reservation Form</h2>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
 
-        <!-- MAILTO FORM -->
-        <form 
-            action="mailto:manziharidi@gmail.com"
-            method="POST"
-            enctype="text/plain">
-
-            <input type="text" name="Full Name" placeholder="Full Name" required>
-
-            <input type="email" name="Email" placeholder="Email Address" required>
-
-            <input type="tel" name="Phone" placeholder="Phone Number" required>
-
-            <select name="Event Type" required>
-                <option value="">Select Event Type</option>
-                <option>Corporate Event</option>
-                <option>VIP Protocol</option>
+            <select required>
+                <option>Select Event Type</option>
+                <option>Corporate</option>
+                <option>VIP</option>
                 <option>Wedding</option>
-                <option>Official Ceremony</option>
                 <option>Other</option>
             </select>
 
-            <input type="date" name="Event Date" required>
+            <input type="date" required>
+            <textarea rows="4" placeholder="Additional Details"></textarea>
 
-            <textarea name="Additional Details" rows="4" placeholder="Additional Details"></textarea>
-
-            <button type="submit">Send Reservation</button>
+            <button type="submit">Submit Reservation</button>
         </form>
-
     </div>
 </section>
 
