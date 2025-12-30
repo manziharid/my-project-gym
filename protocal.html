@@ -4,115 +4,214 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elegant Services and Protocol</title>
+
 <style>
-    body, html { margin:0; padding:0; font-family: Arial,sans-serif; background-color:#0f0f0f; color:#fff; scroll-behavior: smooth;}
-    .navbar {display:flex; justify-content:space-between; align-items:center; padding:15px 30px; position:sticky; top:0; background-color:#0f0f0f; border-bottom:2px solid #bfa135; z-index:100; flex-wrap:wrap;}
-    .navbar .logo {font-size:22px; font-weight:bold; color:#bfa135;}
-    .navbar ul {display:flex; list-style:none; gap:25px; margin:0; padding:0; flex-wrap:wrap;}
-    .navbar ul li a {color:#bfa135; text-decoration:none; font-weight:bold; transition:0.3s;}
-    .navbar ul li a:hover {color:#fff;}
-    .navbar .contact-btn {background-color:#bfa135; color:#0f0f0f; padding:10px 18px; border-radius:5px; font-weight:bold; text-decoration:none; transition:0.3s; white-space:nowrap;}
-    .navbar .contact-btn:hover {background-color:#a68f2a; color:#fff;}
-    .nav-right {display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
-    .social-icon img {width:24px; height:24px; transition:0.3s;}
-    .social-icon img:hover {filter:brightness(0.8);}
-    .search-box {padding:5px 10px; border-radius:5px; border:none; outline:none; font-size:14px;}
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+    scroll-behavior: smooth;
+}
 
-    .hero {background:url('https://images.unsplash.com/photo-1573164574237-01f0f0b7b31a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5N3wwfDB8MXxhbGx8fHx8fHx8Mnx8MTY5Nzk5MzE5Mg&ixlib=rb-4.0.3&q=80&w=1080') center center/cover no-repeat; height:90vh; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding:0 50px; text-shadow:2px 2px 5px #000; position:relative;}
-    .hero::after {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(15,15,15,0.6); z-index:1;}
-    .hero-content {position:relative; z-index:2; max-width:700px; display:flex; flex-direction:column; gap:15px;}
-    .hero h1 {font-size:60px; color:#bfa135; margin:0;}
-    .hero p {font-size:20px; margin:0; color:#fff;}
-    .hero .btn, .hero .reserve-btn {background-color:#bfa135; color:#0f0f0f; padding:15px 30px; font-size:18px; border:none; border-radius:5px; cursor:pointer; font-weight:bold; text-decoration:none; transition:0.3s; margin-top:10px;}
-    .hero .btn:hover, .hero .reserve-btn:hover {background-color:#a68f2a; color:#fff;}
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    background-color: #0f0f0f;
+    border-bottom: 2px solid #bfa135;
+    z-index: 100;
+    flex-wrap: wrap;
+}
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #bfa135;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+.navbar ul li a {
+    color: #bfa135;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.social-icon img {
+    width: 22px;
+}
+.search-box {
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+}
+.contact-btn {
+    background: #bfa135;
+    color: #000;
+    padding: 10px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    .container {max-width:1200px; margin:0 auto; padding:60px 20px;}
-    h2 {color:#bfa135; margin-bottom:20px;}
-    p, li {color:#fff; line-height:1.6;}
-    ul {padding-left:20px;}
-    .protocol-image {width:100%; border-radius:8px; margin:30px 0;}
+/* HERO (USED EVERYWHERE) */
+.hero {
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0IFtagpNW-PVu-6cvDXoLwbTWNQLVW0xjJw&s') center/cover no-repeat;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    position: relative;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+.hero h1 {
+    font-size: 55px;
+    color: #bfa135;
+}
+.hero p {
+    font-size: 20px;
+}
+.btn {
+    background: #bfa135;
+    color: #000;
+    padding: 14px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+}
 
-    footer {background-color:#0f0f0f; color:#fff; text-align:center; padding:40px 20px; border-top:2px solid #bfa135;}
-    footer p {margin:8px 0;}
-    footer strong {color:#bfa135;}
-    footer a {color:#bfa135; text-decoration:none;}
-    footer a:hover {text-decoration:underline;}
+/* SECTIONS */
+.section {
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0IFtagpNW-PVu-6cvDXoLwbTWNQLVW0xjJw&s') center/cover no-repeat;
+    position: relative;
+    padding: 80px 20px;
+}
+.section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+}
+.section-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: auto;
+}
+h2 {
+    color: #bfa135;
+}
+ul {
+    padding-left: 20px;
+}
 
-    @media (max-width:768px) {.hero h1{font-size:40px;}.hero p{font-size:16px;}.navbar ul{gap:12px; flex-wrap:wrap;}.nav-right{gap:5px;}.search-box{width:100px;}.hero .btn,.hero .reserve-btn{padding:12px 20px; font-size:16px;}}
-    @media (max-width:480px) {.hero h1{font-size:32px;}.hero p{font-size:14px;}.navbar .logo{font-size:20px;}.navbar .contact-btn{padding:8px 15px; font-size:14px;}.search-box{width:90px;}.hero .btn,.hero .reserve-btn{padding:10px 18px; font-size:14px;}}
+/* FOOTER */
+footer {
+    background: #0f0f0f;
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 2px solid #bfa135;
+}
+footer a {
+    color: #bfa135;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 36px; }
+    .hero p { font-size: 16px; }
+}
 </style>
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
     <div class="logo">Elegant Services</div>
     <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#overview">Information</a></li>
+        <li><a href="#learn">Learn More</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
-        <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram"></a>
-        <a href="https://www.linkedin.com" target="_blank" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn"></a>
-        <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook"></a>
-        <input type="text" class="search-box" placeholder="Search...">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/174/174857.png"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png"></a>
+        <input class="search-box" placeholder="Search">
     </div>
     <a href="tel:+250791449288" class="contact-btn">Call Us</a>
 </nav>
 
+<!-- HOME -->
 <section class="hero" id="home">
     <div class="hero-content">
         <h1>Elegant Services & Protocol</h1>
-        <p>Professional Event & Protocol Management for VIPs, Corporates, and Special Occasions</p>
-        <div style="display:flex; gap:15px; flex-wrap:wrap;">
-            <a href="#overview" class="btn">Learn More</a>
-            <a href="reservation.html" class="reserve-btn">Reservation</a>
-        </div>
+        <p>Professional Event & Protocol Management</p>
+        <a href="#learn" class="btn">Learn More</a>
+        <a href="reservation.html" class="btn">Reservation</a>
     </div>
 </section>
 
-<section class="container" id="overview">
-    <h2>About Elegant Services</h2>
-    <p>Elegant Services & Protocol is dedicated to providing seamless, professional event and protocol management for VIPs, corporations, and special occasions. Our goal is to ensure every event runs smoothly, elegantly, and leaves a lasting impression.</p>
-    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Event Protocol" class="protocol-image">
+<!-- LEARN MORE -->
+<section class="section" id="learn">
+    <div class="section-content">
+        <h2>About Us</h2>
+        <p>
+            Elegant Services & Protocol provides professional protocol management,
+            VIP reception, ceremonial coordination, and high-level event planning.
+        </p>
+
+        <h2>How We Work</h2>
+        <ul>
+            <li>Consultation & Planning</li>
+            <li>Professional Coordination</li>
+            <li>Event Execution</li>
+            <li>Client Satisfaction</li>
+        </ul>
+
+        <h2>Our Services</h2>
+        <ul>
+            <li>VIP Protocol & Reception</li>
+            <li>Corporate Events</li>
+            <li>Official Ceremonies</li>
+            <li>Hospitality Management</li>
+        </ul>
+    </div>
 </section>
 
-<section class="container" id="how-it-works">
-    <h2>How We Work</h2>
-    <ul>
-        <li><strong>Consultation:</strong> Understand your event requirements.</li>
-        <li><strong>Planning:</strong> Create a detailed protocol and schedule.</li>
-        <li><strong>Execution:</strong> Professional management on the day.</li>
-        <li><strong>Follow-up:</strong> Ensure feedback and satisfaction.</li>
-    </ul>
-</section>
-
-<section class="container" id="information">
-    <h2>Our Services</h2>
-    <ul>
-        <li>Event protocol planning and coordination</li>
-        <li>VIP reception and guest management</li>
-        <li>Corporate and institutional protocol services</li>
-        <li>Hospitality and customer service coordination</li>
-        <li>Official ceremonies and formal event arrangement</li>
-        <li>Travel, accommodation, and guest logistics support</li>
-        <li>Client comfort and wellness support services</li>
-    </ul>
-</section>
-
-<section class="container" id="testimonials">
-    <h2>What Clients Say</h2>
-    <p>"Elegant Services made our corporate event flawless!" – Company A</p>
-    <p>"Professional, punctual, and very friendly team." – VIP Guest</p>
-    <p>"Highly recommend their VIP protocol services!" – Company B</p>
-</section>
-
+<!-- FOOTER -->
 <footer id="contact">
     <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> <a href="tel:+250791449288">+250 79 144 9288</a></p>
-    <p><strong>Email:</strong> <a href="mailto:manziharidi@gmail.com">manziharidi@gmail.com</a></p>
-    <p><strong>Location:</strong> Rwanda</p>
-    <p>© 2025 Elegant Services and Protocol. All Rights Reserved.</p>
+    <p>Phone: <a href="tel:+250791449288">+250 79 144 9288</a></p>
+    <p>Email: <a href="mailto:manziharidi@gmail.com">manziharidi@gmail.com</a></p>
+    <p>© 2025 Elegant Services & Protocol</p>
 </footer>
 
 </body>
