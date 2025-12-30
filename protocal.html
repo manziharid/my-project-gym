@@ -26,6 +26,8 @@
         background-color: #0f0f0f;
         border-bottom: 2px solid #bfa135;
         z-index: 100;
+        flex-wrap: wrap;
+        gap: 10px;
     }
     .navbar .logo {
         font-size: 24px;
@@ -60,6 +62,28 @@
     .navbar .contact-btn:hover {
         background-color: #a68f2a;
         color: #fff;
+    }
+
+    /* Navbar right side: social icons + search */
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .social-icon img {
+        width: 24px;
+        height: 24px;
+        transition: 0.3s;
+    }
+    .social-icon img:hover {
+        filter: brightness(0.8);
+    }
+    .search-box {
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        font-size: 14px;
     }
 
     /* Hero Section */
@@ -148,6 +172,15 @@
     }
 
     /* Responsive */
+    @media (max-width: 992px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .nav-right {
+            margin-top: 10px;
+        }
+    }
     @media (max-width: 768px) {
         .hero h1 {
             font-size: 40px;
@@ -157,6 +190,13 @@
         }
         .navbar ul {
             gap: 15px;
+            flex-wrap: wrap;
+        }
+        .nav-right {
+            gap: 5px;
+        }
+        .search-box {
+            width: 120px;
         }
     }
 </style>
@@ -171,6 +211,21 @@
         <li><a href="#information">Information</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <!-- Social Media and Search -->
+    <div class="nav-right">
+        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+            <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+            <img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+            <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
+        </a>
+        <input type="text" class="search-box" placeholder="Search...">
+    </div>
+
     <a href="#contact" class="contact-btn">Contact Us</a>
 </nav>
 
