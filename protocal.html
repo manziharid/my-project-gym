@@ -6,7 +6,6 @@
 <title>Elegant Services and Protocol</title>
 
 <style>
-/* GENERAL */
 body, html {
     margin: 0;
     padding: 0;
@@ -48,10 +47,10 @@ body, html {
 }
 .nav-right {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     align-items: center;
 }
-.social-icon img {
+.nav-right img {
     width: 22px;
 }
 .search-box {
@@ -68,7 +67,7 @@ body, html {
     font-weight: bold;
 }
 
-/* HERO – ONLY PLACE WITH BACKGROUND IMAGE */
+/* HERO */
 .hero {
     background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0IFtagpNW-PVu-6cvDXoLwbTWNQLVW0xjJw&s') center/cover no-repeat;
     min-height: 90vh;
@@ -106,7 +105,7 @@ body, html {
     margin-right: 10px;
 }
 
-/* NORMAL SECTIONS (NO BACKGROUND IMAGE) */
+/* SECTIONS */
 .section {
     padding: 70px 20px;
 }
@@ -146,21 +145,38 @@ footer a {
 <!-- NAVBAR -->
 <nav class="navbar">
     <div class="logo">Elegant Services</div>
+
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#learn">Learn More</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
+
     <div class="nav-right">
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png"></a>
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/174/174857.png"></a>
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png"></a>
+        <!-- REAL SOCIAL LINKS -->
+        <a href="https://www.instagram.com/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png">
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/24/174/174857.png">
+        </a>
+        <a href="https://www.facebook.com/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png">
+        </a>
+
+        <!-- EMAIL LINK -->
+        <a href="mailto:manziharidi@gmail.com">
+            <img src="https://cdn-icons-png.flaticon.com/24/732/732200.png">
+        </a>
+
         <input class="search-box" placeholder="Search">
     </div>
+
+    <!-- CALL BUTTON -->
     <a href="tel:+250791449288" class="contact-btn">Call Us</a>
 </nav>
 
-<!-- HOME (BACKGROUND IMAGE HERE ONLY) -->
+<!-- HOME -->
 <section class="hero" id="home">
     <div class="hero-content">
         <h1>Elegant Services & Protocol</h1>
@@ -175,22 +191,22 @@ footer a {
     <div class="section-content">
         <h2>About Us</h2>
         <p>
-            Elegant Services & Protocol provides professional protocol management,
-            VIP reception, ceremonial coordination, and high-level event planning.
+            Elegant Services & Protocol specializes in professional protocol services,
+            VIP guest management, and high-standard event coordination.
         </p>
 
-        <h2>How We Work</h2>
+        <h2>Our Process</h2>
         <ul>
-            <li>Consultation & Planning</li>
-            <li>Professional Coordination</li>
+            <li>Planning & Consultation</li>
+            <li>Professional Protocol Setup</li>
             <li>Event Execution</li>
             <li>Client Satisfaction</li>
         </ul>
 
-        <h2>Our Services</h2>
+        <h2>Services</h2>
         <ul>
-            <li>VIP Protocol & Reception</li>
-            <li>Corporate Events</li>
+            <li>VIP Reception & Protocol</li>
+            <li>Corporate & Government Events</li>
             <li>Official Ceremonies</li>
             <li>Hospitality Management</li>
         </ul>
@@ -200,8 +216,8 @@ footer a {
 <!-- FOOTER -->
 <footer id="contact">
     <h2>Contact Us</h2>
-    <p>Phone: <a href="tel:+250791449288">+250 79 144 9288</a></p>
-    <p>Email: <a href="mailto:manziharidi@gmail.com">manziharidi@gmail.com</a></p>
+    <p>📞 <a href="tel:+250791449288">+250 79 144 9288</a></p>
+    <p>✉️ <a href="mailto:manziharidi@gmail.com">manziharidi@gmail.com</a></p>
     <p>© 2025 Elegant Services & Protocol</p>
 </footer>
 
