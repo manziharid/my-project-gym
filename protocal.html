@@ -1,257 +1,210 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegant Services and Protocol</title>
-    <link rel="stylesheet" href="coding.css">
-    <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0f0f0f; /* Black background */
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-        h1, h2, h3 {
-            color: #bfa135; /* Dark gold headings */
-        }
-        p, li {
-            color: #fff;
-        }
-        ul {
-            list-style: disc;
-            padding-left: 20px;
-        }
-        hr {
-            border: 0;
-            border-top: 1px solid #444;
-            margin: 40px 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elegant Services and Protocol</title>
+<style>
+    /* General Body Styles */
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0f0f0f;
+        color: #fff;
+        scroll-behavior: smooth;
+    }
 
-        /* Navbar */
-        .navbar {
-            background-color: #0f0f0f; /* Black */
-            padding: 15px 30px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 2px solid #bfa135; /* Dark gold underline */
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+        position: sticky;
+        top: 0;
+        background-color: #0f0f0f;
+        border-bottom: 2px solid #bfa135;
+        z-index: 100;
+    }
+    .navbar .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #bfa135;
+    }
+    .navbar ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar ul li a {
+        color: #bfa135;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .navbar ul li a:hover {
+        color: #fff;
+    }
+    .navbar .contact-btn {
+        background-color: #bfa135;
+        color: #0f0f0f;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+    .navbar .contact-btn:hover {
+        background-color: #a68f2a;
+        color: #fff;
+    }
+
+    /* Hero Section */
+    .hero {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0IFtagpNW-PVu-6cvDXoLwbTWNQLVW0xjJw&s') center center/cover no-repeat;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 60px;
+        text-shadow: 2px 2px 5px #000;
+        position: relative;
+    }
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(15, 15, 15, 0.6); /* dark overlay */
+        z-index: 1;
+    }
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 700px;
+    }
+    .hero h1 {
+        font-size: 60px;
+        color: #bfa135;
+        margin: 0 0 20px 0;
+    }
+    .hero p {
+        font-size: 20px;
+        margin-bottom: 30px;
+        color: #fff;
+    }
+    .hero .btn {
+        background-color: #bfa135;
+        color: #0f0f0f;
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+    .hero .btn:hover {
+        background-color: #a68f2a;
+        color: #fff;
+    }
+
+    /* Sections */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+    }
+    h2 {
+        color: #bfa135;
+        margin-bottom: 20px;
+    }
+    p, li {
+        color: #fff;
+        line-height: 1.6;
+    }
+    ul {
+        padding-left: 20px;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #0f0f0f;
+        color: #fff;
+        text-align: center;
+        padding: 40px 20px;
+        border-top: 2px solid #bfa135;
+    }
+    footer p {
+        margin: 8px 0;
+    }
+    footer strong {
+        color: #bfa135;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 40px;
+        }
+        .hero p {
+            font-size: 16px;
         }
         .navbar ul {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 30px;
+            gap: 15px;
         }
-        .navbar a {
-            color: #bfa135; /* Dark gold links */
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        .navbar a:hover {
-            color: #fff; /* Hover effect */
-        }
-
-        /* Dropdown Menu */
-        .menu-btn {
-            position: fixed;
-            top: 15px;
-            right: 15px;
-            background: #bfa135; /* Dark gold button */
-            color: #0f0f0f; /* Black text */
-            padding: 12px 16px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 18px;
-            z-index: 101;
-            transition: background 0.3s;
-        }
-        .menu-btn:hover {
-            background: #a68f2a; /* Slightly darker gold */
-        }
-        .menu-list {
-            width: 220px;
-            background: #0f0f0f; /* Black dropdown background */
-            color: #bfa135;
-            margin-top: 8px;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
-            display: none;
-            position: fixed;
-            top: 60px;
-            right: 15px;
-            z-index: 100;
-        }
-        .menu-list a {
-            display: block;
-            padding: 12px 16px;
-            color: #bfa135;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        .menu-list a:hover {
-            background: #bfa135; /* Gold hover */
-            color: #0f0f0f; /* Black text on hover */
-        }
-
-        /* Sections */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .home figure {
-            text-align: center;
-        }
-        .home img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #0f0f0f; /* Black footer */
-            color: #fff;
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 2px solid #bfa135;
-        }
-        footer p {
-            margin: 8px 0;
-        }
-        footer strong {
-            color: #bfa135;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#information">Information</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">Elegant Services</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#information">Information</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="contact-btn">Contact Us</a>
+</nav>
 
-    <!-- Dropdown Menu -->
-    <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
-    <div class="menu-list" id="menu">
-        <a href="#">Wedding Packages</a>
-        <a href="#">Event Preparation</a>
-        <a href="#">Anniversary Packages</a>
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Elegant Services & Protocol</h1>
+        <p>Professional Event & Protocol Management for VIPs, Corporates, and Special Occasions</p>
+        <a href="#information" class="btn">Learn More</a>
     </div>
+</section>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById("menu");
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
-        }
-        document.addEventListener("click", function (e) {
-            const menu = document.getElementById("menu");
-            const button = document.querySelector(".menu-btn");
-            if (!menu.contains(e.target) && !button.contains(e.target)) {
-                menu.style.display = "none";
-            }
-        });
-    </script>
+<!-- Information Section -->
+<section class="container" id="information">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Event protocol planning and coordination</li>
+        <li>VIP reception and guest management</li>
+        <li>Corporate and institutional protocol services</li>
+        <li>Hospitality and customer service coordination</li>
+        <li>Official ceremonies and formal event arrangement</li>
+        <li>Travel, accommodation, and guest logistics support</li>
+        <li>Client comfort and wellness support services</li>
+    </ul>
+</section>
 
-    <!-- Home Section -->
-    <section class="home container" id="home">
-        <h1>Elegant Services and Protocol</h1>
-        <figure>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0IFtagpNW-PVu-6cvDXoLwbTWNQLVW0xjJw&s" alt="Elegant Services and Protocol">
-        </figure>
-
-        <h2>About Us</h2>
-        <p>
-            Elegant Services and Protocol is a professional service company specializing in protocol
-            management, hospitality coordination, and client experience services. We deliver
-            high-quality, respectful, and well-organized services that enhance comfort, dignity,
-            and professional image for individuals, organizations, and institutions.
-        </p>
-
-        <h2>Our Services</h2>
-        <ul>
-            <li>Event protocol planning and coordination</li>
-            <li>VIP reception and guest management</li>
-            <li>Corporate and institutional protocol services</li>
-            <li>Hospitality and customer service coordination</li>
-            <li>Official ceremonies and formal event arrangement</li>
-            <li>Travel, accommodation, and guest logistics support</li>
-            <li>Client comfort and wellness support services</li>
-        </ul>
-
-        <hr>
-
-        <h2>Vision</h2>
-        <p>To be a leading provider of elegant services and professional protocol solutions, recognized for excellence, integrity, and outstanding client experience.</p>
-
-        <h2>Mission</h2>
-        <p>To provide reliable, high-quality, and culturally respectful protocol and hospitality services that enhance the image, comfort, and satisfaction of our clients through professionalism and attention to detail.</p>
-
-        <h2>Objectives</h2>
-        <ul>
-            <li>Deliver elegant and professional services that exceed client expectations.</li>
-            <li>Uphold high standards of ethics, discipline, and confidentiality.</li>
-            <li>Ensure efficient, timely, and well-coordinated service delivery.</li>
-            <li>Continuously train staff in protocol, etiquette, and customer care.</li>
-            <li>Promote cultural respect and a positive corporate image.</li>
-            <li>Expand service reach through innovation and strategic partnerships.</li>
-        </ul>
-    </section>
-
-    <!-- Information Section -->
-    <section class="information container" id="information">
-        <h2>Our Protocol & Service Areas</h2>
-
-        <h3>Protocol & Etiquette Services</h3>
-        <p>We provide professional protocol and etiquette services designed to ensure proper conduct, respect, and organization during official, corporate, and private engagements.</p>
-
-        <h3>Event Coordination & Management</h3>
-        <p>We offer structured event coordination for conferences, meetings, ceremonies, and special occasions, managing guest flow, seating, timing, and overall event organization.</p>
-
-        <h3>VIP & Guest Handling</h3>
-        <p>Our team specializes in professional VIP reception, guest handling, and escort services to ensure comfort and smooth movement of guests during events.</p>
-
-        <h3>Corporate & Institutional Services</h3>
-        <p>We support companies and organizations with protocol guidance, hospitality coordination, and service delivery that enhances corporate image and operational effectiveness.</p>
-
-        <h3>Customer Care & Hospitality Support</h3>
-        <p>We deliver high-quality customer care and hospitality support services, focusing on communication, courtesy, and service excellence to ensure client satisfaction.</p>
-
-        <h3>Why Choose Us</h3>
-        <ul>
-            <li>Highly trained and professional staff</li>
-            <li>Strong knowledge of protocol and etiquette</li>
-            <li>Reliable and well-organized service delivery</li>
-            <li>Respect for cultural and professional standards</li>
-            <li>Commitment to excellence and client satisfaction</li>
-        </ul>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact">
-        <h2>Contact Us</h2>
-        <p>We provide professional protocol, etiquette, and service coordination tailored to corporate, institutional, and private needs.</p>
-        <p><strong>Phone:</strong> +250 79 144 9288</p>
-        <p><strong>Email:</strong> manziharidi@gmail.com</p>
-        <p><strong>Location:</strong> Rwanda</p>
-        <p><strong>Office Hours:</strong><br>
-           Monday – Friday: 8:00 AM – 6:00 PM<br>
-           Saturday: 9:00 AM – 2:00 PM
-        </p>
-        <p><strong>Follow Us:</strong> Facebook | Instagram | LinkedIn | WhatsApp</p>
-        <p>© 2025 Elegant Services and Protocol. All Rights Reserved.</p>
-    </footer>
+<!-- Footer -->
+<footer id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> +250 79 144 9288</p>
+    <p><strong>Email:</strong> manziharidi@gmail.com</p>
+    <p><strong>Location:</strong> Rwanda</p>
+    <p>© 2025 Elegant Services and Protocol. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
