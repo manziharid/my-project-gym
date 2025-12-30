@@ -1,85 +1,141 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>ELEGANT SERVICES AND PROTOCAL</title>
-  <link rel="stylesheet" href="coding.css">
-</head>
-<body>
-  <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#Home">Home</a></li>
-        <li><a href="#information">Information</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Menu Dropdown</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Services and Protocol</title>
+    <link rel="stylesheet" href="coding.css">
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             background: #0f0f0f;
-            padding: 40px;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3 {
+            color: #f5f5f5;
+        }
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #555;
+            margin: 40px 0;
         }
 
-        /* Menu button */
-        .menu-btn {
-            position:fixed;
-            top:1%;
-            right:1%;
-            width: 50px;
+        /* Navbar */
+        .navbar {
+            background-color: #1c1c1c;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            color: #ffd700;
+        }
 
-            background: rgb(85, 73, 6);
-            height: 100px;
-            color: rgb(10, 9, 9);
-            padding: 10px 3px;
-            
+        /* Dropdown Menu */
+        .menu-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #555200;
+            color: #fff;
+            padding: 10px;
             border: none;
             cursor: pointer;
-            font-size: 16px;
             border-radius: 4px;
+            font-size: 16px;
+            z-index: 101;
         }
-
-        /* Dropdown container */
         .menu-list {
             width: 200px;
-            background: white;
+            background: #fff;
+            color: #000;
             margin-top: 8px;
             border-radius: 4px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             display: none;
             position: fixed;
-            top: 14%;
-            right: 1%;
+            top: 50px;
+            right: 10px;
+            z-index: 100;
         }
-
-        /* Menu items */
         .menu-list a {
             display: block;
             padding: 10px 15px;
             color: #000;
             text-decoration: none;
-            font-size: 14px;
         }
-
         .menu-list a:hover {
             background: #f2f2f2;
+        }
+
+        /* Sections */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .home figure {
+            text-align: center;
+        }
+        .home img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1c1c1c;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- Menu Button -->
-    <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#information">Information</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Menu List -->
+    <!-- Dropdown Menu -->
+    <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
     <div class="menu-list" id="menu">
-        <a href="#">wedding packages</a>
-        <a href="#">event prepration</a>
-        <a href="#">aniversary packages</a>
-        
+        <a href="#">Wedding Packages</a>
+        <a href="#">Event Preparation</a>
+        <a href="#">Anniversary Packages</a>
     </div>
 
     <script>
@@ -87,159 +143,103 @@
             const menu = document.getElementById("menu");
             menu.style.display = menu.style.display === "block" ? "none" : "block";
         }
-
-        // Close menu when clicking outside
         document.addEventListener("click", function (e) {
             const menu = document.getElementById("menu");
             const button = document.querySelector(".menu-btn");
-
             if (!menu.contains(e.target) && !button.contains(e.target)) {
                 menu.style.display = "none";
             }
         });
     </script>
 
+    <!-- Home Section -->
+    <section class="home container" id="home">
+        <h1>Elegant Services and Protocol</h1>
+        <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0IFtagpNW-PVu-6cvDXoLwbTWNQLVW0xjJw&s" alt="Elegant Services and Protocol">
+        </figure>
+
+        <h2>About Us</h2>
+        <p>
+            Elegant Services and Protocol is a professional service company specializing in protocol
+            management, hospitality coordination, and client experience services. We deliver
+            high-quality, respectful, and well-organized services that enhance comfort, dignity,
+            and professional image for individuals, organizations, and institutions.
+        </p>
+
+        <h2>Our Services</h2>
+        <ul>
+            <li>Event protocol planning and coordination</li>
+            <li>VIP reception and guest management</li>
+            <li>Corporate and institutional protocol services</li>
+            <li>Hospitality and customer service coordination</li>
+            <li>Official ceremonies and formal event arrangement</li>
+            <li>Travel, accommodation, and guest logistics support</li>
+            <li>Client comfort and wellness support services</li>
+        </ul>
+
+        <hr>
+
+        <h2>Vision</h2>
+        <p>To be a leading provider of elegant services and professional protocol solutions, recognized for excellence, integrity, and outstanding client experience.</p>
+
+        <h2>Mission</h2>
+        <p>To provide reliable, high-quality, and culturally respectful protocol and hospitality services that enhance the image, comfort, and satisfaction of our clients through professionalism and attention to detail.</p>
+
+        <h2>Objectives</h2>
+        <ul>
+            <li>Deliver elegant and professional services that exceed client expectations.</li>
+            <li>Uphold high standards of ethics, discipline, and confidentiality.</li>
+            <li>Ensure efficient, timely, and well-coordinated service delivery.</li>
+            <li>Continuously train staff in protocol, etiquette, and customer care.</li>
+            <li>Promote cultural respect and a positive corporate image.</li>
+            <li>Expand service reach through innovation and strategic partnerships.</li>
+        </ul>
+    </section>
+
+    <!-- Information Section -->
+    <section class="information container" id="information">
+        <h2>Our Protocol & Service Areas</h2>
+
+        <h3>Protocol & Etiquette Services</h3>
+        <p>We provide professional protocol and etiquette services designed to ensure proper conduct, respect, and organization during official, corporate, and private engagements.</p>
+
+        <h3>Event Coordination & Management</h3>
+        <p>We offer structured event coordination for conferences, meetings, ceremonies, and special occasions, managing guest flow, seating, timing, and overall event organization.</p>
+
+        <h3>VIP & Guest Handling</h3>
+        <p>Our team specializes in professional VIP reception, guest handling, and escort services to ensure comfort and smooth movement of guests during events.</p>
+
+        <h3>Corporate & Institutional Services</h3>
+        <p>We support companies and organizations with protocol guidance, hospitality coordination, and service delivery that enhances corporate image and operational effectiveness.</p>
+
+        <h3>Customer Care & Hospitality Support</h3>
+        <p>We deliver high-quality customer care and hospitality support services, focusing on communication, courtesy, and service excellence to ensure client satisfaction.</p>
+
+        <h3>Why Choose Us</h3>
+        <ul>
+            <li>Highly trained and professional staff</li>
+            <li>Strong knowledge of protocol and etiquette</li>
+            <li>Reliable and well-organized service delivery</li>
+            <li>Respect for cultural and professional standards</li>
+            <li>Commitment to excellence and client satisfaction</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>We provide professional protocol, etiquette, and service coordination tailored to corporate, institutional, and private needs.</p>
+        <p><strong>Phone:</strong> +250 79 144 9288</p>
+        <p><strong>Email:</strong> manziharidi@gmail.com</p>
+        <p><strong>Location:</strong> Rwanda</p>
+        <p><strong>Office Hours:</strong><br>
+           Monday – Friday: 8:00 AM – 6:00 PM<br>
+           Saturday: 9:00 AM – 2:00 PM
+        </p>
+        <p><strong>Follow Us:</strong> Facebook | Instagram | LinkedIn | WhatsApp</p>
+        <p>© 2025 Elegant Services and Protocol. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
-
-
-  <div class="home">
-    <h1 id="Home">ELEGANT SERVICES AND PROTOCOL</h1>
-
-    <figure>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0IFtagpNW-PVu-6cvDXoLwbTWNQLVW0xjJw&s"
-             alt="Elegant Services and Protocol">
-    </figure>
-
-    <h2>About Elegant Services and Protocol</h2>
-    <p>
-        Elegant Services and Protocol is a professional service company specializing in protocol
-        management, hospitality coordination, and client experience services. We deliver
-        high-quality, respectful, and well-organized services that enhance comfort, dignity,
-        and professional image for individuals, organizations, and institutions.
-    </p>
-
-    <h2>Our Services</h2>
-    <ul>
-        <li>Event protocol planning and coordination</li>
-        <li>VIP reception and guest management</li>
-        <li>Corporate and institutional protocol services</li>
-        <li>Hospitality and customer service coordination</li>
-        <li>Official ceremonies and formal event arrangement</li>
-        <li>Travel, accommodation, and guest logistics support</li>
-        <li>Lake Muhazi boat transportation coordination</li>
-        <li>Client comfort and wellness support services</li>
-    </ul>
-
-    <p>
-        Our professional and well-trained team is always ready to deliver services with
-        elegance, respect, and excellence.
-    </p>
-
-    <hr>
-
-    <h2>Our Vision</h2>
-    <p>
-        To be a leading provider of elegant services and professional protocol solutions,
-        recognized for excellence, integrity, and outstanding client experience.
-    </p>
-
-    <h2>Our Mission</h2>
-    <p>
-        To provide reliable, high-quality, and culturally respectful protocol and hospitality
-        services that enhance the image, comfort, and satisfaction of our clients through
-        professionalism and attention to detail.
-    </p>
-
-    <h2>Our Objectives</h2>
-    <ul>
-        <li>To deliver elegant and professional services that exceed client expectations.</li>
-        <li>To uphold high standards of ethics, discipline, and confidentiality.</li>
-        <li>To ensure efficient, timely, and well-coordinated service delivery.</li>
-        <li>To continuously train staff in protocol, etiquette, and customer care.</li>
-        <li>To promote cultural respect and a positive corporate image.</li>
-        <li>To expand service reach through innovation and strategic partnerships.</li>
-    </ul>
-</div>
-
-<div class="information">
-    <h2 id="information"><b>Our Protocol & Service Areas</b></h2>
-
-    <h2><b>Protocol & Etiquette Services</b></h2>
-    <p>
-        We provide professional protocol and etiquette services designed to ensure
-        proper conduct, respect, and organization during official, corporate, and
-        private engagements. Our services promote dignity, order, and excellence.
-    </p>
-
-    <h2><b>Event Coordination & Management</b></h2>
-    <p>
-        Elegant Services and Protocol offers well-structured event coordination for
-        conferences, meetings, ceremonies, and special occasions. We manage guest flow,
-        seating arrangements, time management, and overall event organization.
-    </p>
-
-    <h2><b>VIP & Guest Handling</b></h2>
-    <p>
-        Our team specializes in professional VIP reception, guest handling, and escort
-        services. We ensure respectful treatment, comfort, and smooth movement of guests
-        throughout events and official functions.
-    </p>
-
-    <h2><b>Corporate & Institutional Services</b></h2>
-    <p>
-        We support companies, institutions, and organizations with protocol guidance,
-        hospitality coordination, and professional service delivery that enhances their
-        corporate image and operational effectiveness.
-    </p>
-
-    <h2><b>Customer Care & Hospitality Support</b></h2>
-    <p>
-        We deliver high-quality customer care and hospitality support services, focusing
-        on communication, courtesy, and service excellence to ensure client satisfaction.
-    </p>
-
-    <h2><b>Why Choose Elegant Services and Protocol</b></h2>
-    <ul>
-        <li>Highly trained and professional staff</li>
-        <li>Strong knowledge of protocol and etiquette</li>
-        <li>Reliable and well-organized service delivery</li>
-        <li>Respect for cultural and professional standards</li>
-        <li>Commitment to excellence and client satisfaction</li>
-    </ul>
-
-</div>
-
-  <script href="/coding.js"></script>
- 
-
-
-<footer id="contact">
-    <h2>Elegant Services and Protocol</h2>
-
-    <p>
-        We provide professional protocol, etiquette, and service coordination tailored
-        to corporate, institutional, and private needs.
-    </p>
-
-    <p><strong>Phone:</strong> +250 79 144 9288</p>
-    <p><strong>Email:</strong> manziharidi@gmail.com</p>
-    <p><strong>Location:</strong> Rwanda</p>
-
-    <p><strong>Office Hours:</strong><br>
-        Monday – Friday: 8:00 AM – 6:00 PM<br>
-        Saturday: 9:00 AM – 2:00 PM
-    </p>
-
-    <p>
-        <strong>Follow Us:</strong><br>
-        Facebook | Instagram | LinkedIn | WhatsApp
-    </p>
-
-    <p>
-        © 2025 Elegant Services and Protocol. All Rights Reserved.
-    </p>
-</footer>
-</body>
-</html>
-
