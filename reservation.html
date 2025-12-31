@@ -29,7 +29,7 @@ body, html {
     background: rgba(0,0,0,0.7);
 }
 
-/* FORM */
+/* FORM BOX */
 .form-box {
     position: relative;
     z-index: 2;
@@ -70,17 +70,29 @@ button {
     <div class="form-box">
         <h2>Reservation Form</h2>
 
-        <!-- MAILTO FORM -->
+        <!-- EMAIL (OPTION 1) -->
         <form 
-            action="mailto:manziharidi@gmail.com"
+            action="mailto:manziharidi@gmail.com?subject=New Reservation Request - Elegant Services"
             method="POST"
             enctype="text/plain">
 
-            <input type="text" name="Full Name" placeholder="Full Name" required>
+            <input 
+                type="text" 
+                name="Full Name" 
+                placeholder="Full Name" 
+                required>
 
-            <input type="email" name="Email" placeholder="Email Address" required>
+            <input 
+                type="email" 
+                name="Email Address" 
+                placeholder="Email Address" 
+                required>
 
-            <input type="tel" name="Phone" placeholder="Phone Number" required>
+            <input 
+                type="tel" 
+                name="Phone Number" 
+                placeholder="Phone Number" 
+                required>
 
             <select name="Event Type" required>
                 <option value="">Select Event Type</option>
@@ -91,12 +103,22 @@ button {
                 <option>Other</option>
             </select>
 
-            <input type="date" name="Event Date" required>
+            <input 
+                type="date" 
+                name="Event Date" 
+                required>
 
-            <textarea name="Additional Details" rows="4" placeholder="Additional Details"></textarea>
+            <textarea 
+                name="Additional Details" 
+                rows="4" 
+                placeholder="Additional Details"></textarea>
 
             <button type="submit">Send Reservation</button>
         </form>
+
+        <p style="font-size:12px; text-align:center; margin-top:10px;">
+            Your reservation will be sent directly to our administration email.
+        </p>
 
     </div>
 </section>
