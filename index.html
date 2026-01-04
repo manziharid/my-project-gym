@@ -120,6 +120,32 @@ ul {
     padding-left: 20px;
 }
 
+/* IMAGE SLIDER */
+.image-slider {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 15px;
+}
+.image-slider::-webkit-scrollbar {
+    height: 8px;
+}
+.image-slider::-webkit-scrollbar-thumb {
+    background: #bfa135;
+    border-radius: 10px;
+}
+.image-slider img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #bfa135;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
 /* FOOTER */
 footer {
     background: #0f0f0f;
@@ -153,7 +179,6 @@ footer a {
     </ul>
 
     <div class="nav-right">
-        <!-- REAL SOCIAL LINKS -->
         <a href="https://www.instagram.com/" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png">
         </a>
@@ -163,16 +188,12 @@ footer a {
         <a href="https://www.facebook.com/" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png">
         </a>
-
-        <!-- EMAIL LINK -->
         <a href="mailto:manziharidi@gmail.com">
             <img src="https://cdn-icons-png.flaticon.com/24/732/732200.png">
         </a>
-
         <input class="search-box" placeholder="Search">
     </div>
 
-    <!-- CALL BUTTON -->
     <a href="tel:+250791449288" class="contact-btn">Call Us</a>
 </nav>
 
@@ -210,6 +231,15 @@ footer a {
             <li>Official Ceremonies</li>
             <li>Hospitality Management</li>
         </ul>
+
+        <h2>Our Events Gallery</h2>
+        <div class="image-slider">
+            <img src="images/WhatsApp Image 2026-01-03 at 17.51.44.jpeg" alt="Event 1">
+            <img src="images/WhatsApp Image 2026-01-03 at 17.51.45.jpeg" alt="Event 2">
+            <img src="images/WhatsApp Image 2026-01-03 at 17.51.46.jpeg" alt="Event 3">
+            <img src="images/WhatsApp Image 2026-01-03 at 17.51.47.jpeg" alt="Event 4">
+            <img src="images/WhatsApp Image 2026-01-03 at 17.51.48.jpeg" alt="Event 5">
+        </div>
     </div>
 </section>
 
