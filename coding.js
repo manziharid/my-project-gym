@@ -1,3 +1,14 @@
-let a = 10;
-let b = 20;
-console.log(a - b);
+const readline = require("readline");
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Enter first number: ", (num1) => {
+    rl.question("Enter second number: ", (num2) => {
+        let sum = Number(num1) + Number(num2);
+        console.log("Sum =", sum);
+        rl.close();
+    });
+});
