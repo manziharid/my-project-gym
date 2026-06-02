@@ -5,7 +5,7 @@
     </head>
     <body>
         <header
-        class="bg-cover bg-center min-h-screen rounded-br-[120px] rounded-bl-[120px]"
+        class="bg-cover bg-center min-h-screen rounded-br-[120px] rounded-bl-[120px] justify-center items-center relative"
         style="background-image: url('./image/banner-bg.jpg');">
             <div class=" p-4 flex justify-between gap-9 h-18">
          <div class="flex items-start gap-9 w-23 h-2"> <img src="image/logo.png" alt="My Image"> </div>
@@ -26,8 +26,12 @@
         <p class="text-white text-l">LUGX Gaming is free BootStrap 5 HTML CSS website template for your gaming<br>
            websites. you can download and use this layout for commercial purposes.<br>
            Please tell your friends about TemplateMo.
-        </p>
-        <button type="submit">search </button>
+        </p><br><br>
+        
+              <form class="bg-white-500 rounded-full relative">
+                <input type="text" placeholder="Type Something" onkeypress="handle" />
+                <button role="button" class="text-white rounded-full px-6 py-4 bg-red-500">Search Now</button>
+              </form>
         <div class="absolute right-20 top-40">
     <img  src="image/banner-image.jpg" alt="Banner Image" class="w-[400px] rounded-3xl">
 </div>
